@@ -1,9 +1,9 @@
 FROM registry.redhat.io/ubi8/ubi-minimal
 
 RUN \
-  RUN yum -y install --disableplugin=subscription-manager \
-  net-tools dnsutils iputils-ping curl git unzip vim wget \
-  && yum --disableplugin=subscription-manager clean all
+  microdnf install \
+  net-tools bind-utils iputils curl git unzip vim wget \
+  && microdnf clean all
 
 ENV HOME /root
 
