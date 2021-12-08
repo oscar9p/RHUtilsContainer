@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal
 
 RUN \
   microdnf install \
-  net-tools bind-utils iputils curl git unzip vim wget \
+  net-tools bind-utils iputils curl git unzip vim wget telnet \
   && microdnf clean all
 
 ENV HOME /root
